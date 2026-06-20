@@ -1,6 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 
-const PASS = () => process.env.ADMIN_PASSCODE || "TKADMIN2026";
+const PASS = () => process.env.ADMIN_PASSCODE;
 
 export const adminFetch = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => {

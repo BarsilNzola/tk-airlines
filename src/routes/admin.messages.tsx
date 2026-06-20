@@ -50,7 +50,7 @@ function AdminPage() {
               <div><Label htmlFor="pc">Passcode</Label><Input id="pc" type="password" value={pass} onChange={(e) => setPass(e.target.value)} autoFocus /></div>
               <Button type="submit" className="w-full" disabled={loading}>{loading ? "Verifying…" : "Unlock"}</Button>
             </form>
-            <p className="mt-3 text-xs text-muted-foreground">Default: <code className="rounded bg-secondary px-1.5 py-0.5">TKADMIN2026</code> · change via <code>ADMIN_PASSCODE</code> secret.</p>
+            <p className="mt-3 text-xs text-muted-foreground">Default: <code className="rounded bg-secondary px-1.5 py-0.5"></code> · change via <code>ADMIN_PASSCODE</code> secret.</p>
           </div>
         </section>
       </SiteShell>
