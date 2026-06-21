@@ -7,17 +7,20 @@
   node_bundler = "esbuild"
   included_files = ["dist/server/**"]
 
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
 [[redirects]]
   from = "/assets/*"
   to = "/assets/:splat"
   status = 200
+  force = false
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = false
 
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/server"
   status = 200
+  force = false
